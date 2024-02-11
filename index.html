@@ -5,58 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        *{
-            margin: 0;
-        }
-
-        body{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .text {
-            margin-top: 10px;
-            margin-bottom: 30px;
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-        }
-
-        input {
-            width: 40vw;
-            outline: none;
-            border: none;
-            padding: 10px;
-            border-radius: 20px;
-        }
-
-        .parent {
-            display: flex;
-            gap: 20px;
-            flex-direction: column;
-            width: 30%;
-            background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(221, 97, 97, 0.3));
-            border-radius: 10px;
-            list-style-type: I;
-            list-style-position: inside;
-            min-height: 100%;
-            padding: 5px;
-            color: rgb(255, 255, 255);
-        }
-
-        .parent li{
-            background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.34));
-            border-radius: 3px;
-            line-height: 1.2;
-            border: 1px solid rgb(148, 132, 132);
-            padding: 5px;
-            padding-left: 10px;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body style="background-color: black; color:rgb(185, 181, 181)">
@@ -66,20 +15,7 @@
         </ul>
     </div>
 
-    <script>
-        let input = document.querySelector("input");
-
-        input.addEventListener("keydown", (e) => {
-            let li = document.createElement("li");
-            if (e.keyCode === 13) {
-                li.innerText = `${input.value}`
-                const parent = document.querySelector("ul");
-                parent.appendChild(li);
-                input.value = "";
-            }
-        });
-
-    </script>
+    <script src="script.js"></script>
 </body>
 
 </html>
